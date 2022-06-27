@@ -14,11 +14,13 @@ export const VideoCard = ({video})=> {
 
 
     return(
-        <> <Link to={`/${video._id}`}>
+        <> 
         <div className="card-vertical card">
-        <img src={video.imgPreview}alt={video.title} className="card-img"  onClick = {()=> addToHistory(video)}/>
-        <div className="card-header card-header-vl">
-            <div className="card-title"  onClick = {()=>{addToHistory(video)}}>{video.title}</div>
+        <Link to={`/${video._id}`}>
+        <img src={video.imgPreview}alt={video.title} className="card-img" onClick = {()=> addToHistory(video)}/>
+        </Link>
+        <div className="card-header card-header-vl"><Link to={`/${video._id}`}>
+            <div className="card-title"  onClick = {()=>{addToHistory(video)}}>{video.title}</div></Link>
             <div className=" justify-sb align-center flex-row"><div className='card-sub-title'>{video.creator}</div>
             <i className="card-icon fa fa-ellipsis-v" onClick={()=>setShowVideoOptions(!showVideoOptions)} aria-hidden="true"></i></div>
             {showVideoOptions && <ul className='video-option-container'>
@@ -42,7 +44,7 @@ export const VideoCard = ({video})=> {
         </div>
           
         
-        </div></Link>
+        </div>
         </>
     )
 }

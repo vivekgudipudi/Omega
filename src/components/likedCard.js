@@ -2,6 +2,8 @@ import { useState } from 'react';
 import '../App.css'; 
 import { UseLiked } from '../contexts/liked-context';
 import { UseWatchLater } from '../contexts/watchlater-context';
+import { Link } from 'react-router-dom'
+
 
 
 export const LikedCard = ({video})=> {
@@ -14,9 +16,13 @@ export const LikedCard = ({video})=> {
     return(
         <>   
         <div className="card-vertical card card-liked">
+        <Link to={`/${video._id}`}>
         <img src={video.imgPreview}alt={video.title} className="card-img"/>
+        </Link>
         <div className="card-header card-header-vl">
+            <Link to={`/${video._id}`}>
             <div className="card-title">{video.title}</div>
+            </Link>
             <div className=" justify-sb align-center flex-row"><div className='card-sub-title'>{video.creator}</div>
             <i className="card-icon fa fa-ellipsis-v" onClick={()=>setShowVideoOptions(!showVideoOptions)} aria-hidden="true"></i></div>
             {showVideoOptions && <ul className='video-option-container'>
