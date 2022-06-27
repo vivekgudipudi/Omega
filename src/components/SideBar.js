@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom"
 import { UseExplore } from "../contexts/explore-context"
 
 export const SideBar = ()=> {
@@ -6,11 +7,11 @@ export const SideBar = ()=> {
         <>
             
             <aside className="side-bar-container flex-column">
-            <div className="side-bar-heading t4" onClick={() => dispatch({ type: "TOGGLE_CATEGORY",payload : '' })}>EXPLORE</div>
-            <div className="side-bar-heading t4">PLAYLISTS</div>
-            <div className="side-bar-heading t4">LIKED VIDEOS</div>
-            <div className="side-bar-heading t4">WATCH LATER</div>
-            <div className="side-bar-heading t4">HISTORY</div>
+            <NavLink className="side-bar-heading t4" to='/' onClick={() => dispatch({ type: "TOGGLE_CATEGORY",payload : '' })}>EXPLORE</NavLink>
+            <NavLink className="side-bar-heading t4" to='/playlist'>PLAYLISTS</NavLink>
+            <NavLink className="side-bar-heading t4" to='/liked'>LIKED VIDEOS</NavLink>
+            <NavLink className="side-bar-heading t4" to='/watchlater'>WATCH LATER</NavLink>
+            <NavLink className="side-bar-heading t4" to = '/history'>HISTORY</NavLink>
             </aside>
             
         </>

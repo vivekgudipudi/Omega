@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { NavLink,useNavigate } from 'react-router-dom';
-// import { NavBarBrands } from '../components/NavBarBrands';
 import { useAuth } from '../contexts/auth-context';
 import axios from "axios";
 
@@ -37,7 +36,6 @@ export const Signup = ()=> {
 
     return (
         <>
-        {/* <NavBarBrands/> */}
         <div className="container-sign-in justify-center align-center">
             <form className="form-sign-in" onSubmit={(e)=>signupHandler(e,credentials.email,credentials.password,credentials.firstName,credentials.lastName)}>
                 <div className="heading-sign-in t3 bold">SIGN UP</div><hr/>

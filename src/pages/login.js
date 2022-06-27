@@ -12,8 +12,6 @@ export const Login = ()=> {
 
     const loginHandler = async (e,email,password)=>{ 
         e.preventDefault();
-        debugger;
-        console.log(e,email,password);
         try{
             const response = await axios.post(`/api/auth/login`, {
                 email,
