@@ -14,7 +14,7 @@ export const HistoryCard = ({video})=> {
 
 
     return(
-        <>   
+         
         <div className="card-vertical card card-liked">
         <img src={video.imgPreview}alt="kedarnath" className="card-img"/>
         <div className="card-header card-header-vl">
@@ -38,7 +38,6 @@ export const HistoryCard = ({video})=> {
         </div>
         
         </div>
-        </>
     )
 }
 
