@@ -1,22 +1,11 @@
 import { createContext, useContext, useState, useEffect, useReducer } from "react";
-// import { ExploreReducer }   from "../reducers/explore-reducer";
+import { ExploreReducer }   from "../reducers/explore-reducer";
 import axios from 'axios';
 
 const ExploreContext = createContext([]);
 
 const ExploreProvider = ({children}) => {
 
-    const ExploreReducer = (state, action) => {console.log(action)
-        switch (action.type) {
-            case "TOGGLE_CATEGORY" : {
-                return{
-                    ...state,
-                    category : action.payload
-                }
-              }
-              default : return state
-        }
-    }
     const [{category},dispatch] = useReducer(ExploreReducer, {
         category : "",
       });

@@ -4,9 +4,10 @@ import { VideoCard } from '../components/videoCard';
 import { UseExplore } from '../contexts/explore-context';
 
 
+
 export const Explore = ()=>{
 
-    const { data,filteredData } = UseExplore()
+    const { filteredData } = UseExplore()
     
 
     return(

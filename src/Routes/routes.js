@@ -15,7 +15,7 @@ const EndPoints = ()=>{
     return(
         <Routes>
         <Route path="/" element={<Explore />} />
-        <Route path="/explore/:videoID" element={<VideoDetail />} />
+        <Route path="/:videoID" element={<VideoDetail />} />
 
         <Route path="/playlist" element={
             <RequiresAuth>

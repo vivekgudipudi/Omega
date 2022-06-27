@@ -75,7 +75,27 @@
     max-width: 17rem; 
     cursor: pointer;
 }
+.card-liked{
+    height: max-content;
+}
+.card-history{
+    background-color: var(--light-grey);
+    padding: var(--xs);
+    border-radius: var(--xs);
+    margin-left: var(--xs);
+}
 
+.card-video{
+    width: 100%;
+    padding: var(--md);
+}
+.card-video-iconbox{
+    padding: var(--md);
+    font-size: var(--lg);
+}
+.video-action-icon{
+    padding: var(--xs) var(--xl);
+}
 @media screen and (max-width: 480px) {
     .wrapper{
         flex-wrap: wrap;
@@ -83,6 +103,7 @@
     }
     .side-bar-container{
         flex:0 1 85%;
+        margin: 0;
     }
     .product-container{
         margin-left: 0;
