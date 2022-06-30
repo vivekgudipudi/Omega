@@ -16,9 +16,7 @@ const PlaylistProvider = ({children})=>{
     const token = localStorage.getItem("token");
     const navigate = useNavigate()
     const { isLoggedIn } = useAuth();
-    useEffect(()=>{get_playlists()},[boolswitch])
-
-    const get_playlists = async () => {
+    useEffect(()=>{(async () => {
         try{
             const response = await axios.get('/api/user/playlists',
             {
@@ -35,7 +33,10 @@ const PlaylistProvider = ({children})=>{
         catch(error){
             console.log(error.response)
         }
-    }
+    })()},[boolswitch,token])
+
+    // const get_playlists =
+     
     
 
     const addPlaylist = async(name) => {
