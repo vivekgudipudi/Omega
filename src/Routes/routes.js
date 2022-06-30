@@ -22,7 +22,7 @@ const EndPoints = ()=>{
                 <Playlist />
             </RequiresAuth>} />
 
-        <Route path="/:playlistID" element = {<PlaylistDetail/>} />
+        <Route path="playlists/:playlistID" element = {<PlaylistDetail/>} />
 
         <Route path="/liked" element={
             <RequiresAuth>

@@ -9,6 +9,7 @@ import { ExploreProvider } from "./contexts/explore-context";
 import { LikedProvider } from "./contexts/liked-context";
 import { WatchLaterProvider } from "./contexts/watchlater-context";
 import { HistoryProvider } from "./contexts/history-context";
+import { PlaylistProvider } from "./contexts/playlist-context";
 
 
 // Call make Server
@@ -22,7 +23,9 @@ ReactDOM.render(
           <LikedProvider>
             <WatchLaterProvider>
               <HistoryProvider>
-                <App />
+                <PlaylistProvider>
+                  <App />
+                </PlaylistProvider>
               </HistoryProvider>
             </WatchLaterProvider>
           </LikedProvider>
