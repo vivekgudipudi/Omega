@@ -1,15 +1,15 @@
 import { createContext, useContext, useReducer } from "react";
 import axios from 'axios';
-import {  WatchLaterReducer } from "../reducers/watchlater-reducer";
 import { useNavigate } from "react-router-dom"
 import { useAuth } from "./auth-context";
+import { ActionReducer } from "../reducers/action-reducer";
 
 
 const WatchLaterContext = createContext([]);
 
 const WatchLaterProvider = ({children}) =>{
 
-    const [{watchLater},dispatch] = useReducer(WatchLaterReducer, {
+    const [{watchLater},dispatch] = useReducer(ActionReducer, {
         watchLater : []
     })
 
@@ -47,7 +47,7 @@ const WatchLaterProvider = ({children}) =>{
                 )
                 if (response.status === 201) {
                     dispatch({
-                      type: "ADD_TO_LIKED",
+                      type: "ADD_TO_WATCHLATER",
                       payload: response.data.watchlater
                     })
                   }
@@ -58,8 +58,7 @@ const WatchLaterProvider = ({children}) =>{
         }
         else{
             navigate("/login")
-        }
-        
+        } 
     }
 
     const removeFromWatchLater = async(video) => {
@@ -70,7 +69,7 @@ const WatchLaterProvider = ({children}) =>{
             })
             if(response.status === 200) {
                 dispatch({
-                  type: "DELETE_FROM_LIKED",
+                  type: "DELETE_FROM_WATCHLATER",
                   payload: response.data.watchlater,
                 })
             }

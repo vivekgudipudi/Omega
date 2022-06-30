@@ -1,12 +1,12 @@
 import { createContext, useContext, useState, useEffect, useReducer } from "react";
-import { ExploreReducer }   from "../reducers/explore-reducer";
+import { ActionReducer } from "../reducers/action-reducer";
 import axios from 'axios';
 
 const ExploreContext = createContext([]);
 
 const ExploreProvider = ({children}) => {
 
-    const [{category},dispatch] = useReducer(ExploreReducer, {
+    const [{category},dispatch] = useReducer(ActionReducer, {
         category : "",
       });
       

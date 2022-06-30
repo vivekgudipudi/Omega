@@ -5,7 +5,7 @@ import { HistoryCard } from '../components/historyCard';
 
 
 export const History = ()=> {
-    const { history, removeFromHistory } = UseHistory();
+    const { history } = UseHistory();
     return (
         <div className="wrapper flex-row">
             <SideBar/>

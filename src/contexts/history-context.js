@@ -1,12 +1,13 @@
 import { createContext, useContext, useReducer } from "react";
 import axios from 'axios';
-import {  HistoryReducer } from "../reducers/history-reducer";
+import { ActionReducer } from "../reducers/action-reducer";
+
 
 const HistoryContext = createContext([]);
 
 const HistoryProvider = ({children}) =>{
 
-    const [{history},dispatch] = useReducer(HistoryReducer, {
+    const [{history},dispatch] = useReducer(ActionReducer, {
         history : []
     })
 
@@ -69,13 +70,6 @@ const HistoryProvider = ({children}) =>{
     }
 
     
-
-
-
-
-
-
-
     return(
         <HistoryContext.Provider value={{history, addToHistory, removeFromHistory}}>
             {children}

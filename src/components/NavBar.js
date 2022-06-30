@@ -1,6 +1,5 @@
 import '../App.css';
 import {NavLink } from "react-router-dom";
-// import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/auth-context';
 import { UseExplore } from '../contexts/explore-context';
 
@@ -8,7 +7,6 @@ import { UseExplore } from '../contexts/explore-context';
 export const NavBar = ()=> {
 
     const { isLoggedIn,setIsLoggedIn } = useAuth();
-    // const navigate = useNavigate();
     const { dispatch } = UseExplore()
 
     const loginClickHandler = () => { if(isLoggedIn){

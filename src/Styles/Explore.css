@@ -96,6 +96,74 @@
 .video-action-icon{
     padding: var(--xs) var(--xl);
 }
+.overlay{
+    position: fixed;
+    transition: .2s ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0, 0.3);
+    pointer-events: all;
+    z-index: 4;
+}
+.playlist-modal{
+    width: 15rem;
+    padding: var(--xs);
+    cursor: pointer;
+    z-index: 10;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: var(--xs);
+    background-color: var(--background-color);
+}
+.modal-heading{
+    background-color: var(--light-grey);
+    border-radius: var(--xs);
+    padding: var(--xs);
+}
+.modal-body{
+    background-color: var(--light-grey);
+    margin-top: var(--xs);
+    border-radius: var(--xs);
+    padding: 0;
+
+}
+.modal-body ul{
+    padding-left: 0;
+}
+.modal-body li{
+    padding: 2px 0;
+}
+.modal-btn{
+    margin: 0;
+}
+.modal-input{
+    padding: 2px;
+    margin: var(--xs) 0;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+.playlist-card{
+    border-radius: var(--xs);
+    height: max-content;
+    min-width: 10rem;
+    max-width: max-content;
+    margin: var(--xs);
+    padding: var(--xs) 2px;
+    background-color: white;
+}
+.playlist-card-title{
+    background-color: var(--grey-100);
+    border-radius: 2px;
+    text-align: center;
+    padding: var(--xs);
+}
+.playlist-footer{
+    margin-top: var(--xs);
+}
 @media screen and (max-width: 480px) {
     .wrapper{
         flex-wrap: wrap;

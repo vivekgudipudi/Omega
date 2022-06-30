@@ -1,15 +1,16 @@
 import { createContext, useContext, useReducer } from "react";
 import axios from 'axios';
-import {  LikedReducer } from "../reducers/liked-reducer";
 import { useNavigate } from "react-router-dom"
 import { useAuth } from "./auth-context";
+import { ActionReducer } from "../reducers/action-reducer";
+
 
 
 const LikedContext = createContext([]);
 
 const LikedProvider = ({children}) =>{
 
-    const [{liked},dispatch] = useReducer(LikedReducer, {
+    const [{liked},dispatch] = useReducer(ActionReducer, {
         liked : []
     })
 
