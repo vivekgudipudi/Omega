@@ -1,6 +1,6 @@
-export const ActionReducer = (state, action) => {console.log("entered dragon",action.type);
+export const ActionReducer = (state, action) => {
     switch (action.type) {
-        case "GET_PLAYLISTS": console.log("from reducer",action.payload);
+        case "GET_PLAYLISTS":
             return{
                 ...state,
                 playlists : action.payload

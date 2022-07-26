@@ -10,7 +10,7 @@ export const VideoCard = ({video})=> {
     const [showVideoOptions,setShowVideoOptions] = useState(false);
     const { liked,removeFromLiked,addToLiked } = UseLiked();
     const { watchLater, removeFromWatchLater, addToWatchLater} = UseWatchLater();
-    const { addToHistory } = UseHistory();;
+    const { addToHistory } = UseHistory();
     const { playlists,addPlaylist,addToPlaylist  } = UsePlayList()
     const [showOverlay,setShowOverlay] = useState(false);
     const [newPlaylistName,setNewPlaylistName] = useState();

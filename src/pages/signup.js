@@ -9,7 +9,6 @@ export const Signup = ()=> {
     const navigate = useNavigate();
 
     const signupHandler =  async (e,email,password,firstName,lastName) => {
-        console.log(email,password,firstName,lastName)
         e.preventDefault();
 
         try{
@@ -19,7 +18,6 @@ export const Signup = ()=> {
                 firstName,
                 lastName
             })
-            console.log(response)
             if (response.status === 201) {
                 localStorage.setItem("token", response.data.encodedToken);
                 setIsLoggedIn((login)=> !login)

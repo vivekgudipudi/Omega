@@ -9,7 +9,6 @@ export const PlaylistDetail = ()=> {
     const { playlists } = UsePlayList();
 
     const playlistObj = playlists.find((playlist) => playlist._id === playlistID);
-    console.log("parthcode",playlistObj);
     
     return(
         <div className="wrapper flex-row">

@@ -22,7 +22,6 @@ const PlaylistProvider = ({children})=>{
             {
                 headers: { authorization: token }
             });
-            console.log("get_playlists",response.data.playlists,"status",console.log(response.status));
            
                 dispatch({
                     type : "GET_PLAYLISTS",
@@ -47,7 +46,7 @@ const PlaylistProvider = ({children})=>{
                 {
                     headers: { authorization: token }
                 }
-                );console.log("add_playlists",response.data)
+                );
                 if (response.status === 201) {
                     dispatch({
                       type: "ADD_PLAYLISTS",
@@ -123,7 +122,7 @@ const PlaylistProvider = ({children})=>{
             navigate("/login")
         }
     }
-    const removeFromPlaylist = async(video,playlistID) => {console.log("delete",video._id,playlistID)
+    const removeFromPlaylist = async(video,playlistID) => {
         try{
             const response = await axios.delete(`/api/user/playlists/${playlistID}/${video._id}`,
             {
