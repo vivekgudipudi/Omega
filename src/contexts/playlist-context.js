@@ -122,7 +122,7 @@ const PlaylistProvider = ({children})=>{
             navigate("/login")
         }
     }
-    const removeFromPlaylist = async(video,playlistID) => {
+    const removeFromPlaylist = async(video,playlistID) => { console.log("working",video,playlistID)
         try{
             const response = await axios.delete(`/api/user/playlists/${playlistID}/${video._id}`,
             {
@@ -132,7 +132,7 @@ const PlaylistProvider = ({children})=>{
                   type: "DELETE_FROM_PLAYLIST",
                   payload: response.data.playlist,
                 })
-    
+                
         }
         catch(error){console.log(error.response)}
     }
